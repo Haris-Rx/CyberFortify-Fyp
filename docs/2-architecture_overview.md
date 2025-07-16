@@ -6,7 +6,7 @@ This document explains the complete network and security architecture used to si
 
 ## Network Topology
 
-![Network Architecture](architechture_real.jpg)
+![Network Architecture](3-architechture_real.jpg)
 
 
 This diagram represents the segmented security zones and layered defense mechanisms implemented in the virtual SOC lab.
