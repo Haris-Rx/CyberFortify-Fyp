@@ -44,7 +44,7 @@ This section explains the actual EVE-NG topology built to simulate the enterpris
 
 ## 🖼️ Topology Diagram
 
-![EVE-NG Network Topology](docs/5-network_topology.jpg)
+![EVE-NG Network Topology](5-network_topology.jpg)
 
 ---
 
