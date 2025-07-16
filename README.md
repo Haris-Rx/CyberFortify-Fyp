@@ -49,7 +49,7 @@
 
 ## Network Architecture
 
-> ![Topology Preview](docs/network_topology.png)
+> ![Topology Preview](docs/network_topology.jpg)
 
 - Fortinet Firewall as perimeter guard
 - IDS/IPS with Suricata for real-time alerts
