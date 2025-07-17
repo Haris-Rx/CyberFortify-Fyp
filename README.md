@@ -22,7 +22,7 @@
 <p align="left">
   <img src="https://img.shields.io/badge/Fortinet-FC1F1F?style=for-the-badge&logo=fortinet&logoColor=white"/>
   <img src="https://img.shields.io/badge/Wazuh-0077C8?style=for-the-badge&logo=wazuh&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Suricata-F5821F?style=for-the-badge&logo=data:image/svg+xml;base64,&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Suricata-F5821F?style=for-the-badge&logoColor=white"/>
   <img src="https://img.shields.io/badge/Splunk-000000?style=for-the-badge&logo=splunk&logoColor=white"/>
   <img src="https://img.shields.io/badge/EVE--NG-000000?style=for-the-badge&logo=gnubash&logoColor=white"/>
   <img src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white"/>
