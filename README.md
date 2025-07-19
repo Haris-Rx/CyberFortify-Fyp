@@ -35,10 +35,10 @@
 | Attack Type          | Tool/Technique         | Detection Layer        |
 |----------------------|------------------------|------------------------|
 | Ping of Death        | hping3                 | Firewall / Wazuh       |
-| Brute Force (SSH)    | Hydra                  | Suricata               |
-| Reverse Shell        | Netcat / Bash          | Wazuh / Suricata       |
-| DDoS (Layer 4/7)     | Slowloris, hping3      | Fortinet / Suricata    |
-| HTTP Tunneling       | Custom Python Scripts  | Fortinet / Suricata    |
+| Brute Force (SSH)    | Hydra                  | Suricata / Wazuh       |
+| Reverse Shell        | Netcat / Python        | Wazuh / Suricata       |
+| DDoS (Layer 4/7)     | Slowloris, hping3      | Fortinet               |
+| HTTP Tunneling       | Custom Python Scripts  | Fortinet               |
 | Malware Simulation   | Custom Python Scripts  | EDR / Wazuh SIEM       |
 | Port Scanning        | Nmap                   | Suricata               |
 
