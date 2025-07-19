@@ -9,11 +9,10 @@
 ---
 
 ## Project Goals
-- Build a virtual SOC lab from scratch
-- Simulate realistic red team attacks (DDoS, reverse shell, brute force, tunneling)
-- Detect and respond using real-time tools (SIEM, IDS/IPS, firewall, forensic logging)
+- Build a virtual defense architecture lab from scratch
+- Emulate realistic red team attacks (DDoS, reverse shell, brute force, tunneling)
+- Detect and respond using real-time tools (SIEM, IDS, firewall, logging)
 - Enforce network access policies and role-based control using AAA
-- Map events across layers: endpoint → network → SIEM
 
 ---
 
@@ -23,7 +22,6 @@
   <img src="https://img.shields.io/badge/Fortinet-FC1F1F?style=for-the-badge&logo=fortinet&logoColor=white"/>
   <img src="https://img.shields.io/badge/Wazuh-0077C8?style=for-the-badge&logo=wazuh&logoColor=white"/>
   <img src="https://img.shields.io/badge/Suricata-F5821F?style=for-the-badge&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Splunk-000000?style=for-the-badge&logo=splunk&logoColor=white"/>
   <img src="https://img.shields.io/badge/EVE--NG-000000?style=for-the-badge&logo=gnubash&logoColor=white"/>
   <img src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white"/>
   <img src="https://img.shields.io/badge/Windows_Server-00ADEF?style=for-the-badge&logo=windows&logoColor=white"/>
@@ -37,33 +35,31 @@
 | Attack Type          | Tool/Technique         | Detection Layer        |
 |----------------------|------------------------|------------------------|
 | Ping of Death        | hping3                 | Firewall / Wazuh       |
-| Brute Force (SSH)    | Hydra                  | Suricata / Splunk      |
+| Brute Force (SSH)    | Hydra                  | Suricata               |
 | Reverse Shell        | Netcat / Bash          | Wazuh / Suricata       |
 | DDoS (Layer 4/7)     | Slowloris, hping3      | Fortinet / Suricata    |
-| ICMP Tunneling       | Icmptx / BingRat       | Suricata IDS           |
+| HTTP Tunneling       | Custom Python Scripts  | Fortinet / Suricata    |
 | Malware Simulation   | Custom Python Scripts  | EDR / Wazuh SIEM       |
-| DNS Tunneling        | dns2tcp                | Suricata IDS           |
-| Port Scanning        | Nmap                   | Suricata / Splunk      |
+| Port Scanning        | Nmap                   | Suricata               |
 
 ---
 
-## Network Architecture
+## Multi Layered Security Architecture
 
 > ![Topology Preview](docs/5-network_topology.jpg)
 
-- Fortinet Firewall as perimeter guard
-- IDS/IPS with Suricata for real-time alerts
-- Wazuh & Splunk SIEM for correlation and dashboards
-- **Cisco ISE + AAA (RADIUS/TACACS)** for identity and access management (IAM)
-- Role-based VLAN segmentation based on user authentication
-- Red team attackers on segmented DMZ
+### Defense Structure
+- **Fortinet** Firewall as perimeter guard
+- **Suricata** IDS for real-time alerts
+- **Wazuh** SIEM for correlation, dashboards and EDR
+- **Cisco ISE (RADIUS/TACACS)** for identity and access management (IAM)
+- Servers used for data center DMZ simulation
+- Role-based VLAN segmentation and subnetting
 
-### Cisco ISE – Access Control & IAM
-- Integrated **Cisco Identity Services Engine (ISE)** for dynamic AAA
-- Used **RADIUS** to authenticate, authorize, and account for users
-- Role-based access via VLAN assignment on switches
-- Users are authenticated via ISE before gaining access to internal resources
-- Simulated **Zero Trust** behavior by enforcing strict per-user network control
+### Attack Emulation
+- **Kali Linux** for outside attacker and internal threat
+- Multiple linux bots for DDoS
+- **Python** for HTTP tunneling, reverse shell and keylogger scripts
 
 ---
 
@@ -108,6 +104,7 @@ CyberFortify/
 ## Key Learnings
 - How real-world SIEMs detect threat behavior
 - How firewalls filter Layer 3-7 attack traffic
-- How to build a resilient, monitorable SOC from scratch
+- How to build a monitorable SOC from scratch
 - How AAA protocols control internal access dynamically
-- Importance of log correlation, anomaly detection, and IAM
+- Importance of log correlation, anomaly detection, and IDS
+- Importance of putting crucial servers behind DMZ
