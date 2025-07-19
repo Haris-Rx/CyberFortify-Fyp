@@ -4,7 +4,7 @@ This section explains the actual EVE-NG topology built to emulate the enterprise
 
 ---
 
-## 🔹 Virtual Devices Use
+## 🔹 Virtual Devices Used
 
 - **Fortinet FortiGate** – Placed at the perimeter as first line of defense, DHCP server per VLAN
 - **Cisco ISE** – Placed seperately in VLAN 100, enforces RADIUS auth, TACACS+ on NAD and VLAN assignment
