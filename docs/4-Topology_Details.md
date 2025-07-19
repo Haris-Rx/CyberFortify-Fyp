@@ -1,48 +1,45 @@
 # EVE-NG Network Topology Overview
 
-This section explains the actual EVE-NG topology built to simulate the enterprise SOC environment for CyberFortify.
+This section explains the actual EVE-NG topology built to emulate the enterprise environment for CyberFortify.
 
 ---
 
 ## 🔹 Virtual Devices Used
 
-- **Router (Cisco IOSv)** – Configured with EIGRP, interfaces to switches
-- **Switch 1 (Core)** – Trunked with Router and Switch 2, hosts VLANs
-- **Switch 2 (Access)** – Connected to endpoints and ISE server
-- **Fortinet Firewall** – Placed at the perimeter, filters Layer 3/4 traffic
-- **Wazuh SIEM** – Connected via management VLAN, collects logs
-- **Suricata IDS** – Listens to mirror port traffic from Fortinet and endpoints
-- **Cisco ISE** – Enforces AAA, VLAN assignment via RADIUS
-- **Windows Server** – Hosts internal services
-- **Kali Linux (Red Team)** – Launches attacks into internal zones
+- **Fortinet FortiGate** – Placed at the perimeter as first line of defense, DHCP server per VLAN
+- **Cisco ISE** – Placed seperately in VLAN 100, enforces RADIUS auth, TACACS+ on NAD and VLAN assignment
+- **Wazuh SIEM** – Connected via management VLAN, collects logs, performs EDR through agents
+- **Suricata IDS** – Integrated inside Wazuh, logs network traffic via custom ruleset
+- **Data Center Server** – Based on CentOS 7 for simulating a crucial server, in seperate VLAN 50
+- **Windows Server** – Active Directory server for supporting Cisco ISE domain
+- **NTP Router** – Configured as only NTP master for supporting Cisco ISE
+- **Core Switch (Cisco IOSv)** – Trunked with other switches, Hosts VLANs
+- **ISE module Switch** – Connected to Cisco ISE, TACACS+ enabled security
+- **Access Switches (Cisco IOSv and IOL)** – Connected to endpoints of departments, Access switch 1 is RADIUS enforcer
+- **Kali Linux** – Launches attacks into internal zones with help of Internal Threat
 
 ---
 
-## 🔹 VLANs & Interfaces
+## 🔹 VLANs / Departments
 
-| VLAN ID | Purpose           | Devices                        |
-|---------|-------------------|--------------------------------|
-| 10      | Management        | Wazuh, Splunk, ISE             |
-| 20      | Endpoints         | Windows 10, Ubuntu             |
-| 30      | Server Zone       | Windows Server, CentOS         |
-| 40      | DMZ / Red Team    | Kali Machines                  |
+| VLAN ID | Purpose            | Devices                             |
+|---------|--------------------|-------------------------------------|
+| 10      | Endpoints          | Windows/Ubuntu Desktops             |
+| 20      | Endpoints          | Windows/Ubuntu Desktops             |
+| 30      | Endpoints / R&D    | Desktops, Network Devices           |
+| 40      | Endpoints          | Windows/Linux Desktops              |
+| 50      | DMZ                | CentOS 7 SRV                        |
+| 99      | Segmentation (SOC) | Siem/Ids SRV                        |
+| 100     | Management (ISE)   | Cisco ISE, Windows SRV, NTP router  |
 
-- Trunk ports configured between switches and router
-- Access ports assigned by ISE using dynamic VLAN assignment
-
----
-
-## 🧭 Network Flow Example
-
-1. Red Team (Kali) sends brute-force traffic to internal endpoint (192.168.20.X)
-2. Suricata detects brute-force pattern on mirrored interface
-3. Wazuh logs login failures from SSH or SMB
-4. Fortinet blocks excessive requests if policy threshold exceeded
-5. Cisco ISE logs user/device attempting access and applies VLAN or blocks
+- VLAN 10 is department 1 which is supervised by Cisco ISE and supporting components
+- VLAN 20 is department 2 which is monitored by SOC (SIEM and IDS)
+- VLAN 30 is department 3 which is only allowed access to NetSec R&D section in topology which is just to simulate segmentation
+- VLAN 40 is department 4 which is only allowed access to internet
 
 ---
 
-## 🖼️ Topology Diagram
+## Topology Diagram
 
 ![EVE-NG Network Topology](5-network_topology.jpg)
 
@@ -50,5 +47,5 @@ This section explains the actual EVE-NG topology built to simulate the enterpris
 
 ## Summary
 
-The EVE-NG simulation recreated an enterprise-grade, VLAN-segmented, AAA-enforced network using open-source and enterprise-grade tools to detect and respond to over 15 cyberattacks.
+This EVE-NG emulation is an enterprise-grade, multi-layered security architecture using some licenced (EVAL) and open-source technologies.
 
