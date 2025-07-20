@@ -32,8 +32,8 @@ This section explains the actual EVE-NG topology built to emulate the enterprise
 | 99      | Segmentation (SOC) | Siem/Ids SRV                        |
 | 100     | Management (ISE)   | Cisco ISE, Windows SRV, NTP router  |
 
-- VLAN 10 is department 1 which is supervised by Cisco ISE and supporting components
-- VLAN 20 is department 2 which is monitored by SOC (SIEM and IDS)
+- VLAN 10 is department 1 which is supervised by Cisco ISE and its supporting components, these endpoints have access to data center/dmz server
+- VLAN 20 is department 2 which is monitored by SOC (SIEM and IDS), these endpoints also have access to data center/dmz server
 - VLAN 30 is department 3 which is only allowed access to NetSec R&D section in topology which is just to simulate segmentation
 - VLAN 40 is department 4 which is only allowed access to internet
 
