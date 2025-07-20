@@ -46,7 +46,7 @@
 
 ## Multi Layered Security Architecture
 
-> ![Topology Preview](docs/5-network_topology.jpg)
+> ![Topology Preview](docs/4-network_topology.jpg)
 
 ### Defense Structure
 - **Fortinet** Firewall as perimeter guard
