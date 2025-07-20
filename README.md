@@ -68,35 +68,53 @@
 ```
 CyberFortify/
 ├── README.md
-├── docs/                    # Report, diagrams, architecture
-│   ├── CyberFortify_Report.pdf
-│   ├── network_topology.png
-│   └── architecture.drawio
-├── simulations/             # Attack payloads & steps
-│   ├── brute_force.md
-│   ├── icmp_tunneling.md
-│   └── reverse_shell.md
-├── blue_team/               # Defense logs & configs
-│   ├── cisco_ise/
+├── Blue_team/               # Defense logs & configs
+│   ├── Cisco_ise/
 │   │   ├── access_policy.png
 │   │   ├── radius_auth_logs.png
 │   │   └── ise_notes.md
-│   ├── fortinet/
+│   ├── Fortinet/
 │   │   ├── firewall_rules.png
 │   │   ├── ddos_detection.png
 │   │   └── fortinet_logs.md
-│   ├── wazuh/
+│   ├── Networking/
+│   │   ├── cli_pics.png
+│   │   ├── something.png
+│   │   └── network_config.md
+│   ├── Servers/
+│   │   ├── centos/linux.png
+│   │   ├── windows.png
+│   │   └── edr_configs.md
+│   ├── Wazuh/
 │   │   ├── alerts_dashboard.png
 │   │   ├── ssh_brute_log.png
 │   │   └── wazuh_config.yaml
-│   └── suricata/
+│   └── Suricata/
 │       ├── suricata_alerts.png
 │       ├── portscan_detection.png
 │       └── suricata.yaml
-├── red_team/                # Attacker terminal screenshots
-│   ├── brute_force.png
-│   ├── icmp_tunnel_demo.png
-│   └── reverse_shell_trigger.png
+├── Red_team/                # Attack payloads, steps & codes
+│   ├── Malware_codes/
+│   │   ├── code1.py
+│   │   ├── code2.py
+│   │   └── code3.py
+│   ├── keylogger.png
+│   ├── http_tunnel_demo.md
+│   └── reverse_shell.md
+├── assets/                    # diagrams, screenshots
+│   ├── extras/
+│   │   ├── initial-design.jpg
+│   │   ├── something.md
+│   │   └── config.yaml
+│   └── screenshots/
+│       ├── screenshot1.png
+│       ├── screenshot2.png
+│       └── screenshot3.png
+├── docs/                    # Report, architecture
+│   ├── CyberFortify_Report.pdf
+│   ├── project_summary.md
+│   └── topology_details.md
+├── LICENSE
 ```
 
 ---
