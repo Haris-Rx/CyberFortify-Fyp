@@ -1,6 +1,6 @@
 # Cisco ISE
 
-Cisco ISE (Identity Services Engine) is placed in a seperate module with its supporting components in VLAN 100.
+Cisco ISE (Identity Services Engine) is an IAM and AAA server, its placed in a seperate module with its supporting components in VLAN 100.
 
 ---
 
