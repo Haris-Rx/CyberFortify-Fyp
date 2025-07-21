@@ -88,6 +88,7 @@ A group of routers placed in seperate section of architecture.
 - **DMZ-MP switch:** This switch is connected to Cisco ISE and supports VLAN 100 nodes, this switch is secured with IAM and AAA protocols from ISE.
 - **DMZ-HP switch:** This switch is connected to the data center server and it hosts a single VLAN 50
 - Other switches are connected to their respective endpoints or are only for data transfer
-- *Note* Switches connected to Cisco ISE are discussed in Cisco ISE's directory
+
+*Note: Switches connected to Cisco ISE are discussed in Cisco ISE's directory*
 
 ---
