@@ -94,7 +94,9 @@ CyberFortify/
 │       ├── suricata_alerts.png
 │       ├── portscan_detection.png
 │       └── suricata.yaml
-├── Red_team/                # Attack payloads, steps & codes
+|
+├── Red_team/     # Attack payloads, steps & codes
+|
 │   ├── Malware_codes/
 │   │   ├── code1.py
 │   │   ├── code2.py
@@ -102,7 +104,8 @@ CyberFortify/
 │   ├── keylogger.png
 │   ├── http_tunnel_demo.md
 │   └── reverse_shell.md
-├── assets/                    # diagrams, screenshots
+|
+├── assets/        # diagrams, screenshots
 │   ├── extras/
 │   │   ├── initial-design.jpg
 │   │   ├── something.md
@@ -111,7 +114,8 @@ CyberFortify/
 │       ├── screenshot1.png
 │       ├── screenshot2.png
 │       └── screenshot3.png
-├── docs/                    # Report, architecture
+|
+├── docs/        # Report, architecture
 │   ├── project_summary.md
 │   └── topology_details.md
 ├── LICENSE
