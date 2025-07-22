@@ -68,7 +68,8 @@
 ```
 CyberFortify/
 ├── README.md
-├── Blue_team/               # Defense logs & configs
+├── Blue_team/    # Defense logs & configs
+|
 │   ├── Cisco_ise/
 │   │   ├── access_policy.png
 │   │   ├── radius_auth_logs.png
@@ -79,7 +80,7 @@ CyberFortify/
 │   │   └── fortinet_logs.md
 │   ├── Networking/
 │   │   ├── cli_pics.png
-│   │   ├── something.png
+│   │   ├── configs.png
 │   │   └── network_config.md
 │   ├── Servers/
 │   │   ├── centos/linux.png
@@ -111,7 +112,6 @@ CyberFortify/
 │       ├── screenshot2.png
 │       └── screenshot3.png
 ├── docs/                    # Report, architecture
-│   ├── CyberFortify_Report.pdf
 │   ├── project_summary.md
 │   └── topology_details.md
 ├── LICENSE
