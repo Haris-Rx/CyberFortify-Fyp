@@ -1,6 +1,6 @@
 # CyberFortify – Project Summary
 
-CyberFortify is a virtual Security Operations Center (SOC) lab designed to simulate real-world red team attacks and evaluate blue team defenses using enterprise-grade tools. The project provides hands-on experience with detection, response, and identity-based access control in a fully segmented and monitored network environment.
+CyberFortify is a multi layered security defense lab designed to simulate real-world red team attacks and evaluate blue team defenses using enterprise-grade and open-source tools. The project provides hands-on experience with detection, response, and identity-based access control in a fully segmented and monitored network environment.
 
 ---
 
@@ -8,20 +8,11 @@ CyberFortify is a virtual Security Operations Center (SOC) lab designed to simul
 
 To build and test a complete cybersecurity defense environment that can:
 
-- Simulate red team attacks (e.g., brute force, tunneling, DDoS, malware)
-- Detect and log threats in real-time using SIEMs and IDS
-- Apply role-based access policies using Cisco ISE and AAA
-- Demonstrate blue team defense through logs, alerts, and firewall rules
-
----
-
-## Key Components
-
-- **Firewall:** Fortinet – network segmentation and policy enforcement
-- **IDS/IPS:** Suricata – detects and logs attack traffic in real time
-- **SIEM:** Wazuh and Splunk – event correlation, alerting, and forensic search
-- **Access Control:** Cisco ISE – AAA enforcement using RADIUS/TACACS+, VLAN assignment
-- **Red Team:** Kali Linux – attack simulations using tools like Hydra, Netcat, hping3
+- Demonstrate blue team defense through firewall policies
+- Detect and log threats in real-time using SIEM and IDS
+- Apply role-based access policies using IAM and AAA
+- Demonstrate robust network segmentation
+- Simulate red team attacks (e.g. tunneling, DDoS, reverse shells, keyloggers etc)
 
 ---
 
@@ -30,39 +21,30 @@ To build and test a complete cybersecurity defense environment that can:
 - Fortinet Firewall
 - Suricata IDS
 - Wazuh SIEM
-- Splunk SIEM
 - Cisco ISE (AAA)
+- Cisco switches/routers (networking)
 - Kali Linux (attack VMs)
 - Windows Server (internal endpoints)
+- CentOS 7 Server (data center)
 - EVE-NG (virtual lab)
-
----
-
-## What We Demonstrated
-
-- Detection of brute-force, tunneling, malware, and DoS attacks
-- Real-time alert generation and dashboarding in SIEMs
-- Role-based network segmentation enforced by AAA via Cisco ISE
-- Full attack-to-detection lifecycle for each simulated threat
-
----
-
-## Documentation
-
-- `CyberFortify_Report.pdf`: Complete project report with screenshots, logs, and theory
-- `architecture_overview.md`: Visual breakdown of the project architecture
-- `simulations/`: Attack procedures and terminal screenshots
-- `blue_team/`: Defense logs, screenshots, and configuration summaries
 
 ---
 
 ## Outcomes
 
-This project demonstrates how a complete SOC can be set up using open-source and enterprise-grade tools to:
-- Detect advanced persistent threats
-- Respond to network intrusions
-- Apply identity-based access control
-- Log, alert, and analyze security events across layers
+- Using firewall as first line of defense
+- Real-time alert generation and dashboarding in SIEM
+- Role-based network segmentation enforced by IAM
+- EDR capabilities using IDS
+- Better network design and control
+- Application of tunneling, reverse shells, and DoS attacks
 
-CyberFortify reflects a real-world, defensive cybersecurity environment aimed at building both offensive insight and defensive strategy.
+---
 
+## Documentation
+
+- `Blue_team/`: Defense logs, screenshots, and configuration summaries
+- `Red_team/`: Attack procedures, terminal screenshots and malware codes
+- `docs/`: Visual breakdown and basic overview of the project architecture
+
+---
