@@ -68,56 +68,59 @@
 ```
 CyberFortify/
 ├── README.md
-├── Blue_team/    # Defense logs & configs
-|
+├── Blue_team/                       # Defense details, logs & configs
 │   ├── Cisco_ise/
-│   │   ├── access_policy.png
-│   │   ├── radius_auth_logs.png
-│   │   └── ise_notes.md
+│   │   ├── 1-cisco_ise.md
+│   │   └── 2-node_details.md
 │   ├── Fortinet/
-│   │   ├── firewall_rules.png
-│   │   ├── ddos_detection.png
-│   │   └── fortinet_logs.md
+│   │   ├── 1-fortigate_firewall.md
+│   │   └── 2-node_details.md
 │   ├── Networking/
-│   │   ├── cli_pics.png
-│   │   ├── configs.png
-│   │   └── network_config.md
+│   │   ├── 1-networking.md
+│   │   ├── 2-nodes_details.md
+│   │   └── 3-configs.md
 │   ├── Servers/
-│   │   ├── centos/linux.png
-│   │   ├── windows.png
-│   │   └── edr_configs.md
+│   │   ├── 1-servers.md
+│   │   └── 2-nodes_details.md
 │   ├── Wazuh/
-│   │   ├── alerts_dashboard.png
-│   │   ├── ssh_brute_log.png
-│   │   └── wazuh_config.yaml
+│   │   ├── 1-wazuh_siem.md
+│   │   └── 2-vm_details.md
 │   └── Suricata/
-│       ├── suricata_alerts.png
-│       ├── portscan_detection.png
-│       └── suricata.yaml
+│       ├── 1-suricata_ids.md
+│       └── 2-vm_details.md
 |
-├── Red_team/     # Attack payloads, steps & codes
-|
+├── Red_team/                      # Attack payloads, steps & codes
 │   ├── Malware_codes/
-│   │   ├── code1.py
-│   │   ├── code2.py
-│   │   └── code3.py
-│   ├── keylogger.png
-│   ├── http_tunnel_demo.md
-│   └── reverse_shell.md
+│   │   ├── keylogger.py
+│   │   ├── privilege_escalation.py
+│   │   ├── reverse_shell.py
+│   │   ├── server_http_tunnel.py
+│   │   └── victim_http_tunnel.py
+│   ├── Attack Design.md
+│   ├── Attack Simulation - DDoS.md
+│   ├── Attack Simulation - Recon.md
+│   ├── Malware Simulation - HTTP Tunneling.md
+│   ├── Malware Simulation - Privilege Escalation.md
+│   ├── Malware Simulation - Python Keylogger.md
+│   └── Malware Simulation - Reverse Shell.md
 |
-├── assets/        # diagrams, screenshots
+├── assets/                       # diagrams, screenshots
 │   ├── extras/
-│   │   ├── initial-design.jpg
-│   │   ├── something.md
-│   │   └── config.yaml
-│   └── screenshots/
-│       ├── screenshot1.png
-│       ├── screenshot2.png
-│       └── screenshot3.png
+│   │   └── initial-design.jpg
+│   ├── screenshots/
+│   │   ├── [name1]/
+│   │   │   ├── screenshot1.png
+│   │   │   ├── screenshot2.png
+│   │   │   └── screenshot3.png
+│   │   └── [name2]/
+│   │   │   ├── screenshot4.png
+│   │   │   ├── screenshot5.png
+│   │   │   └── screenshot6.png
 |
-├── docs/        # Report, architecture
-│   ├── project_summary.md
-│   └── topology_details.md
+├── docs/                         # Report, architecture
+│   ├── 1-project_summary.md
+│   ├── 2-topology_details.md
+│   └── 3-requirements.md
 ├── LICENSE
 ```
 
