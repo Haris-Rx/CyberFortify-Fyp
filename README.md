@@ -1,4 +1,4 @@
-# CyberFortify – Final Year Cybersecurity Project.      
+# CyberFortify – Final Year Cybersecurity Project.       
 
 ## Team Members
 
